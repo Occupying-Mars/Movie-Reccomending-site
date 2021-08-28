@@ -2,7 +2,6 @@ import pickle
 import streamlit as st
 import requests
 import pandas as pd
-import os
 
 def fetch_poster(movie_id):
     response = requests.get('https://api.themoviedb.org/3/movie/?api_key=8c37dd217ff4493e86ffadf1afe90f3f&language=en-US".format(movie_id)')
@@ -20,7 +19,7 @@ def recommend(movie):
     movies_list=sorted(list(enumerate(distances)),reverse=True,key=lambda x:x[1])[1:6]
     
     recommended_movies=[]
-    #reccommended_movies_poster = []
+    reccommended_movies_poster = []
     for i in movies_list:   
         movie_id=movies.iloc[i[0]].movie_id
         recommended_movies.append(movies.iloc[i[0]].title)
