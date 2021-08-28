@@ -13,6 +13,8 @@ def fetch_poster(movie_id):
     st.write(data)
     return full_path
 
+similarity=pickle.load(open('similarity.pkl','rb'))
+
 def recommend(movie):
     movie_index = movies[movies['title'] == movie].index[0]
     distances = similarity[movie_index]
@@ -32,7 +34,7 @@ def recommend(movie):
 movie_dict= pickle.load(open('movie_dict.pkl','rb'))
 movies=pd.DataFrame(movie_dict)
 
-similarity=pickle.load(open('similarity.pkl','rb'))
+
 
 st.title('Movie reccomender system')
 
