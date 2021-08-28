@@ -62,5 +62,7 @@ if st.button('Reccommend'):
         #st.image(posters[4])
         
         
-
+PORT = int(os.environ.get('PORT', 33507))
+33507 is
+change 5000 to 33507
     
