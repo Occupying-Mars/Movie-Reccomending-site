@@ -201,5 +201,4 @@ whitenoise==5.2.0
 widgetsnbextension==3.5.1
 wikipedia==1.4.0
 wrapt==1.12.1
-streamlit
-requests
+
